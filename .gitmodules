@@ -1,0 +1,3 @@
+[submodule "components/esy"]
+	path = components/esy
+	url = git@github.com:seblavoie/esy.git
