@@ -30,7 +30,6 @@ Once installed, Hyle runs in the user’s background and makes available a compr
 
 ## Warning
 
-The script is still in an early stage. It still needs work and real situations to be thrown at it in order to mature. The script has it’s own automatic updater though. So whenever a new version is tagged, all user will be asked if they want to download it, and the script will update itself to the latest version hosted here on Github.
-
+The script is still in an early stage. It still needs work and real situations to be thrown at it in order to mature.
 
 
