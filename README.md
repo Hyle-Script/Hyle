@@ -12,7 +12,7 @@ Hyle can be used to:
 
 ## Installing Hyle
 
-This repository contains the language’s standalone core. If you are seaching for the After Effects panel to generate and submit Hyle scripts, you will find it in [this repository](). 
+This repository contains the language’s standalone core. If you are seaching for the After Effects panel to generate and submit Hyle scripts, you will find it in [this repository](https://github.com/Hyle-Script/Hyle-Panel). 
 
 1. Download [`hyle.jsx`](https://github.com/Hyle-Script/Hyle/blob/master/hyle.jsx) and copy it in your startup scripts folder.
     
