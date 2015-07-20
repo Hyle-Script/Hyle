@@ -1,0 +1,22 @@
+compositions:
+  - name: 08. Test Keyframes Composition
+    layers:
+      - type: solid
+        transform:
+          scale:
+            keyframes:
+              - time: 0
+                value: [0, 0, 0]
+              - time: 1
+                value: [100, 100, 100]
+                easing: in
+          rotation:
+            value: 50
+            expression: time
+          opacity:
+            keyframes:
+              - time: 0
+                value: 0
+              - time: 1
+                value: 100
+                easing: in

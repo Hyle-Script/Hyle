@@ -1,0 +1,17 @@
+folders:
+  - 01_Folders
+  - | folder 1
+  - | | folder 1.1
+  - | | | folder 1.1.1
+  - | | folder 1.2
+  - | folder 2
+  - | | folder 2.1
+  - | folder 3
+  - name: Folder 4
+    id: test
+    folder: 01_Folders
+    label: 9
+    comment: "This folder should have a comment, a green label and be selected"
+    selected: true
+  - name: Folder 4.1
+    parentFolder: test

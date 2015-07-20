@@ -1,0 +1,21 @@
+folders:
+  - name: 02_Compositions
+
+compositions:
+  - name: 01. Test Default Composition
+    folder:  02_Compositions
+  - name: "02. Test 1920x1080 Composition"
+    folder:  02_Compositions
+    width: 1920
+    height: 1080
+    pixel aspect: 1.1
+    duration: 20
+    framerate: 30
+    color: ff0000
+    id: 1
+  - name: 03. Test Nested composition
+    folder: 02_Compositions
+    composition: 1
+  - name: 04. Test Fetching composition
+    folder: 02_Compositions
+    fetch: 1

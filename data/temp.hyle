@@ -1,0 +1,34 @@
+folders:
+  - name: Solids
+    parentFolder: Root
+  - name: Untitled 1
+    parentFolder: Root
+  - name: Untitled 2
+    parentFolder: Untitled 1
+compositions:
+  - duration: 7
+    height: 1080
+    name: Comp 1
+    parentFolder: Untitled 2
+    width: 1920
+    color:
+      - 0
+      - 0
+      - 0
+    layers:
+      - height: 1080
+        outPoint: 7
+        width: 1920
+        type: text
+      - height: 100
+        outPoint: 7
+        width: 100
+        type: null
+      - height: 1080
+        outPoint: 7
+        width: 1920
+        type: solid
+files:
+  - name: logo.png
+    parentFolder: Untitled 2
+    selected: true

@@ -1,0 +1,90 @@
+compositions:
+  - name: 05. Test Layers Composition
+    layers:
+
+      - type: solid
+        name: Test Solid Layer
+
+      - type: solid
+        name: Test In and Out Points
+        in point: 1
+        out point: 3
+
+      - type: solid
+        name: Test Transform Properties
+        transform:
+          scale: [50, 50]
+          opacity: 10
+          position: [100, 200]
+
+      - type: solid
+        name: Test Blending Modes
+        blending mode: darken
+
+      - type: solid
+        name: Test Motion Blur
+        motion blur: true
+
+      - type: adjustment
+        name: Test Adjustement Layer
+        adjustment: true
+
+      - type: light
+        name: Test Light Layer
+        options:
+          intensity: 50
+          color: ff8000
+          cone angle: 45
+          cone feather: 20
+          falloff: 1
+          radius: 250
+          falloff distance: 250
+          casts shadows: 250
+          shadow darkness: 50
+          shadow diffusion: 5
+
+      - type: camera
+        name: Test Camera Layer
+        options:
+          zoom: 3.14
+          depth of field: true
+          focus distance: 20
+          aperture: 50
+          blur level: 50
+          iris shape: 3
+          iris rotation: 20
+          iris aspect ratio: 1
+          iris diffraction fringe: 2
+          highlight gain: 10
+          highlight threshold: 10
+          highlight saturation: 10
+
+      - type: text
+        name: Test Text Layer
+        text: This is a test
+        font size: 64
+        font color: ffff00
+        apply stroke: true
+        stroke color: ff0000
+        stroke width: 1
+        font: Helvetica
+        stroke over fill: true
+        justification: center
+        tracking: 10
+
+      - type: null
+        name: Test Null Layer
+
+
+      - type: shape
+        name: Test Shape Layer
+
+      - type: file
+        name: Test File Layer
+        file: "~/Dropbox/_Personnal/images/logo.png"
+
+      - name: Some Layer
+        id: 123
+
+      - name: Child layer
+        parent: 123

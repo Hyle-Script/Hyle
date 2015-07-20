@@ -1,0 +1,24 @@
+compositions:
+  - name: 09. Test Text Layers
+    layers:
+      - type: text
+        text:
+          expression: time
+          keyframes:
+            - time: 0
+              value: ah
+            - time: 1
+              value: lol
+
+      - type: Text
+        id: jkl
+        text: Some text
+        font: Helvetica Neue
+        font size: 60
+        transform:
+          scale: [50, 50]
+
+      - inherit: jkl
+        text: Different text
+        font: Arial
+        font color: ff8000

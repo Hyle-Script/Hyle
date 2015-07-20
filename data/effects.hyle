@@ -1,0 +1,47 @@
+compositions:
+  - name: 06. Test Effects Composition
+    layers:
+      - name: Test Effects : Wood Texture
+        type: solid
+        effects:
+          - type: fractal noise
+            properties:
+              fractal type: 9
+              noise type: 2
+              uniform scaling: false
+              scale height: 900
+              complexity: 10
+              sub influence (%): 90
+              sub scaling: 60
+          - type: tint
+            properties:
+              map black to: 9A6541
+              map white to: 261A12
+
+      - name: Test Effects : Blueprint
+        type: solid
+        effects:
+          - type: fill
+            properties:
+              color: 2F4E81
+          - type: grid
+            properties:
+              anchor: [-1, -1]
+              corner: [9, 9]
+              border: 1
+              blending mode: 2
+              opacity: 15
+          - type: grid
+            properties:
+              anchor: [-1, -1]
+              corner: [49, 49]
+              border: 1
+              blending mode: 2
+              opacity: 30
+          - type: grid
+            properties:
+              anchor: [-1, -1]
+              corner: [99, 99]
+              border: 1
+              blending mode: 2
+              opacity: 50

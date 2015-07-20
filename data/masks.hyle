@@ -1,0 +1,16 @@
+compositions:
+  - name: 07. Test Mask Composition
+    layers:
+      - type: solid
+        name: Test Masks
+        masks:
+          - name: My mask
+            feather: [50, 50]
+            opacity: 50
+            inverted: true
+            expansion: 20
+            path:
+              type: ellipse
+              width: 1280
+              height: 720
+              position: [0, 0]

@@ -1,0 +1,24 @@
+compositions:
+  - name: 06. Test Shapes Composition
+    layers:
+      - name: Test Shapes : Fan Blades
+        type: shape
+        contents:
+          - type: group
+            name: Triangle
+            contents:
+              - type: polystar
+                points: 3
+                position: [0, -100]
+                rotation: [0, 180]
+                outer radius: 100
+                rotation: 180
+              - type: fill
+                color: ffffff
+            transform:
+              scale: [20, 500]
+          - type: repeater
+            copies: 36
+            transform:
+              rotation: 10
+              start opacity: 0

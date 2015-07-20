@@ -1,0 +1,239 @@
+folders:
+  - Assets
+  - | Audio
+  - | | Voice Over
+  - | | Score
+  - | | FX
+  - | Stills
+  - | | Bitmaps
+  - | | Vector
+  - | | 3D
+  - | Video
+  - | | Prerenders
+  - | | Stock
+  - | | Shooting
+  - Comps
+  - | Scenes
+  - | Elements
+
+files:
+  - path: "/Users/sebastienlavoie/Dropbox/_Personnal/images/logo.png"
+    id: 1
+
+defaults:
+  layers:
+    motion blur: true
+
+compositions:
+
+  - name: 01. Test layer creation
+    layers:
+      - name: 3D layer
+        type: Solid
+        adjustment: true
+        motion blur: true
+        in point: 1
+        out point: 3
+        blending mode: darken
+        3d: true
+      - type: text
+        text:
+          value: This is a test
+        font size: 64
+        3d: true
+      - type: null
+        name: Null Layer
+
+
+  - name: 02. Test Shapes
+    layers:
+      - type: shape
+        name: fan blades
+        contents:
+          - type: group
+            name: Triangle
+            contents:
+              - type: polystar
+                points: 3
+                position: [0, -100]
+                rotation: [0, 180]
+                outer radius: 100
+                rotation: 180
+              - type: fill
+                color: ffffff
+            transform:
+              scale: [20, 500]
+          - type: repeater
+            copies: 36
+            transform:
+              rotation: 10
+              start opacity: 0
+
+  - name: 03. Test mask
+    color: ffffff
+    layers:
+      - type: solid
+        masks:
+          - name: My mask
+            feather: [50, 50]
+            opacity: 50
+            inverted: true
+            expansion: 20
+            path:
+              type: ellipse
+              width: 1280
+              height: 720
+              position: [0, 0]
+
+  - name: 04. Test texture
+    layers:
+      - type: solid
+        effects:
+          - type: fractal noise
+            properties:
+              fractal type: 9
+              noise type: 2
+              uniform scaling: false
+              scale height: 900
+              complexity: 10
+              sub influence (%): 90
+              sub scaling: 60
+              contrast: 50
+          - type: tint
+            properties:
+              map black to: 9A6541
+              map white to: 261A12
+              Amount to Tint: 50
+
+  - name: 05. Test easing
+    layers:
+      - type: solid
+        3d: true
+        transform:
+          scale:
+            keyframes:
+              - time: 0
+                value: [0, 0, 0]
+              - time: 1
+                value: [100, 100, 100]
+                easing: in
+          opacity:
+            keyframes:
+              - time: 0
+                value: 0
+              - time: 1
+                value: 100
+                easing: in
+
+  - name: 06. Test expressions / effects
+    layers:
+      - type: solid
+        effects:
+          - type: slider control
+            name: Amplitude
+            properties:
+              slider: .05
+          - type: slider control
+            name: Frequency
+            properties:
+              slider: 2
+          - type: slider control
+            name: Decay
+            properties:
+              slider: 4
+          - type: transform
+            properties:
+              scale:
+                value: 50
+                expression: |
+                  n = 0;
+                  if (numKeys > 0) {
+                    n = nearestKey(time).index;
+                    if (key(n).time > time) {
+                      n--;
+                    }
+                  }
+                  if (n == 0) {
+                    t = 0;
+                  } else {
+                    t = time - key(n).time;
+                  }
+                  if (n > 0) {
+                    v = velocityAtTime(key(n).time - thisComp.frameDuration/10);
+                    amp = effect("Amplitude")("Slider");
+                    freq = effect("Frequency")("Slider");
+                    decay = effect("Decay")("Slider");
+                    value + v*amp*Math.sin(freq*t*2*Math.PI)/Math.exp(decay*t);
+                  } else {
+                    value;
+                  }
+                keyframes:
+                  - time: 0
+                    value: 0
+                  - time: .5
+                    value: 100
+              rotation:
+                keyframes:
+                  - time: 0
+                    value: -180
+                  - time: .5
+                    value: 0
+
+  - name: 07. Layer Styles
+    layers:
+      - type: solid
+        styles:
+          - type: color overlay
+            opacity: 50
+            blend mode: 4
+          - type: bevel and emboss
+            angle: 120
+          - type: outer glow
+          - type: stroke
+            position: 2
+
+  - name: 08. Visibility switches
+    layers:
+      - type: solid
+        shy: true
+        solo: true
+        enabled: true
+
+  - name: 09. File import
+    layers:
+      - type: file
+        file: 1
+
+  # - name: 09. Fetch
+  #   layers:
+  #     - fetch: 08. File import
+
+  - name: 10. Eval directive
+    layers:
+      - type: solid
+        transform:
+          scale: [50, 50]
+          opacity: {{ 8-2 }}
+
+  - name: 11. Frame Input
+    duration: 50 frames
+    layers:
+      - type: solid
+        transform:
+          opacity:
+            keyframes:
+              - time: 5 frames
+                value: 0
+              - time: 10 frames
+                value: 100
+
+  - name: 12. Text animators
+    layers:
+      - type: text
+        text:
+          expression: time
+          keyframes:
+            - time: 0
+              value: ah
+            - time: 1
+              value: lol
