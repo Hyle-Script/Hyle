@@ -1,4 +1,3 @@
-`#target "aftereffects-13.0"`
 `#include "../lib/core/hyle.js"`
 
 hyle = new Hyle()

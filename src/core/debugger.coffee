@@ -5,11 +5,11 @@ class Hyle.Debugger
 
   initialize: () ->
     if hyle.debug
-      # @testParser()
+      @testParser()
       # @testComposer()
       # @testTemp()
 
-      @testComposer()
+      # @testComposer()
       # @testCompositions()
       # @testLayers()
       # @testTexts()
