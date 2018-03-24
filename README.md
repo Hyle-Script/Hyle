@@ -10,6 +10,8 @@ Hyle can be used to:
 - Easily Generate a big amount of content
 - Avoid repetitive tasks
 
+The website has been taken down, but documentation is still available here: https://github.com/Hyle-Script/hyle.io/tree/master/resources/documentation/v1.
+
 ## Installing Hyle
 
 This repository contains the language’s standalone core. If you are seaching for the After Effects panel to generate and submit Hyle scripts, you will find it in [this repository](https://github.com/Hyle-Script/Hyle-Panel). 
